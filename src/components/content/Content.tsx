@@ -4,9 +4,10 @@ import { First } from './First';
 
 export const Content = () => {
   return (
-    <Container maxWidth="lg" sx={{paddingTop: {xs: 11, md: 15}}}>
+    // px not working? :(
+    <Container maxWidth="lg" sx={{px: 20, pt: {xs: 11, md: 15}}}>
       <First />
-      <Divider variant="middle" sx={{marginY: 5}} />
+      <Divider sx={{marginY: 5}} />
       <div style={{padding: 30, lineHeight: 1.3}}>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, laboriosam quidem! Velit consequatur odit aspernatur? Officia distinctio ad dicta soluta at maiores molestias iusto. Nisi, doloribus? Corporis non impedit laboriosam.
         Sint eius harum dicta provident soluta repellat aperiam distinctio, ad nihil sit esse, autem fugiat libero, eligendi iusto tempora beatae sequi doloremque labore cumque. Itaque facere temporibus aliquid quis fugiat?
