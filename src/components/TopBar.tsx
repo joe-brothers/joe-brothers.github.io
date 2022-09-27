@@ -2,7 +2,7 @@ import React from 'react';
 import {AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
 import {Business as BusinessIcon, Menu as MenuIcon} from '@mui/icons-material';
 
-const pages = ['Products', 'Solutions', 'Developer', 'Company'];
+const pages: string[] = ['Products', 'Solutions', 'Developer', 'Company'];
 
 export const TopBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

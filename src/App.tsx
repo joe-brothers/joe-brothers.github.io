@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
 import { Content } from './components/content';
 import { TopBar } from './components/TopBar';
+import './App.css';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <TopBar />
@@ -11,5 +11,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
