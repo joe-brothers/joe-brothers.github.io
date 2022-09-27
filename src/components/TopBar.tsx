@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
 import {Business as BusinessIcon, Menu as MenuIcon} from '@mui/icons-material';
 
@@ -16,8 +16,8 @@ export const TopBar = () => {
   };
 
   return (
-    <AppBar color="transparent" sx={{backdropFilter:"blur(10px)"}}>
-      <Container maxWidth="xl">
+    <AppBar color="transparent" sx={{ backdropFilter:"blur(10px)" }}>
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
           <BusinessIcon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
           <Typography
