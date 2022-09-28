@@ -1,8 +1,8 @@
 import React from 'react';
-import {AppBar, Box, Button, Container, Divider, Grid, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
+import {Container, Divider} from '@mui/material';
 import { First } from './First';
 
-export const Content = () => {
+export const Main = () => {
   return (
     // px not working? :(
     <Container maxWidth="lg" sx={{pt: {xs: 11, md: 15}}}>

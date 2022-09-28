@@ -1,15 +1,16 @@
 import React from 'react';
-import { Content } from './components/content';
-import { TopBar } from './components/TopBar';
-import { Footer } from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import { LayoutWithTopBarAndFooter } from './layouts/LayoutWithTopBarAndFooter';
+import { Main, Games } from './components/content';
 import './App.css';
 
 export const App = () => {
   return (
-    <div className="App">
-      <TopBar />
-      <Content />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="" element={<LayoutWithTopBarAndFooter />}>
+        <Route index element={<Main />} />
+        <Route path="games" element={<Games />} />
+      </Route>
+    </Routes>
   );
 }

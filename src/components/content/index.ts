@@ -1,3 +1,4 @@
-import { Content } from "./Content";
+import { Main } from "./main";
+import { Games } from "./games";
 
-export { Content };
+export { Main, Games };
