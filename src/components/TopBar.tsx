@@ -16,10 +16,10 @@ export const TopBar = () => {
   };
 
   return (
-    <AppBar color="transparent" sx={{ backdropFilter:"blur(10px)" }}>
+    <AppBar color="transparent" elevation={5} sx={{ backdropFilter:"blur(10px)" }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <BusinessIcon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
+          <BusinessIcon sx={{ display: 'block', mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -27,7 +27,7 @@ export const TopBar = () => {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'flex' },
+              display: 'block',
               fontFamily: 'Source Code Pro',
               fontWeight: 700,
               letterSpacing: '.3rem',
