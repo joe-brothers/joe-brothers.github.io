@@ -1,12 +1,15 @@
 import React from 'react';
 import {Container, Divider} from '@mui/material';
 import { First } from './First';
+import { Logos } from './Logos';
 
 export const Main = () => {
   return (
     // px not working? :(
     <Container maxWidth="lg" sx={{pt: {xs: 11, md: 15}}}>
       <First />
+      <Divider sx={{marginY: 5}} />
+      <Logos />
       <Divider sx={{marginY: 5}} />
       <div style={{lineHeight: 1.3}}>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, laboriosam quidem! Velit consequatur odit aspernatur? Officia distinctio ad dicta soluta at maiores molestias iusto. Nisi, doloribus? Corporis non impedit laboriosam.
