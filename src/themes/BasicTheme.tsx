@@ -5,6 +5,7 @@ export const BasicTheme = createTheme({
   palette: {
     primary: {
       main: indigo[500],
+      light: indigo[200],
     }
   },
 });
