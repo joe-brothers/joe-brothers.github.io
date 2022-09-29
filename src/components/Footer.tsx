@@ -83,7 +83,7 @@ export const Footer = () => {
   };
 
   return (
-      <Container maxWidth="lg" sx={{display: 'flex', flexDirection: 'column', gap: 3, pb: 10}}>
+      <Container maxWidth="lg" sx={{display: 'flex', flexDirection: 'column', gap: 10, pt: 5, pb: 10}}>
         <Grid container spacing={2} columns={{xs: 2, sm: 7}}>
           <Grid item xs={2} sm={1}>
             <BusinessIcon sx={{fontSize: 70}} />
@@ -92,8 +92,8 @@ export const Footer = () => {
             return (
               <Grid item xs={1}>
                 <Typography>{category}</Typography>
-                <Divider />
-                <ul>
+                <Divider sx={{my: 1}} />
+                <ul style={{display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {items.map((item) => {
                     return Object.entries(item).map(([key, value]) => <li style={{wordBreak: 'break-word'}}>
                       <MenuLink onClick={() => navigate(value)}>{key}</MenuLink>
