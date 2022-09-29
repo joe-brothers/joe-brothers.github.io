@@ -3,14 +3,21 @@ import { AttachMoney, CurrencyBitcoin, CurrencyFranc, CurrencyPound, CurrencyYen
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 
 const IconWithFontSize = (Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>, fontSize: number) => {
-  return <Icon sx={{fontSize}} />;
+  return <Icon sx={{ fontSize }} />;
 };
 
-const logoComponents = [AttachMoney, Euro, CurrencyFranc, CurrencyPound, CurrencyYen, CurrencyBitcoin];
+const logoComponents: (OverridableComponent<SvgIconTypeMap<{}, "svg">>)[] = [
+  AttachMoney,
+  Euro,
+  CurrencyFranc,
+  CurrencyPound,
+  CurrencyYen,
+  CurrencyBitcoin
+];
 
 export const Logos = () => {
   return (
-    <Container sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+    <Container sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
       {logoComponents.map((logo) => IconWithFontSize(logo, 50))}
     </Container>
   )

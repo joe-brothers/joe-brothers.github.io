@@ -1,6 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 import { indigo } from "@mui/material/colors";
 
+const theme = createTheme();
+
 export const BasicTheme = createTheme({
   palette: {
     primary: {
@@ -8,4 +10,11 @@ export const BasicTheme = createTheme({
       light: indigo[200],
     }
   },
+  typography: {
+    h3: {
+      [theme.breakpoints.down('md')]: {
+        fontSize: '2.4rem',
+      },
+    }
+  }
 });
