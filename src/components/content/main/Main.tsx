@@ -2,25 +2,9 @@ import React from 'react';
 import {Container, Divider, Link, styled, Typography} from '@mui/material';
 import { First } from './First';
 import { Logos } from './Logos';
-import { ArrowForward } from '@mui/icons-material';
-
-const CustomLink = styled(Link)(({theme}) => ({
-  fontFamily: 'Roboto',
-  textDecoration: 'none',
-  '&:hover': {
-    textDecoration: 'underline',
-    cursor: 'pointer',
-    'svg': {
-      right: -8,
-    }
-  },
-  'svg': {
-    fontSize: '1rem',
-    transition: '.2s all',
-    position: 'relative',
-    right: -3,
-  },
-}));
+import { LinkWithArrow } from '../../LinkWithArrow';
+import { ProductWithImage } from './ProductWithImage';
+import { Products } from './Products';
 
 export const Main = () => {
   return (
@@ -31,8 +15,10 @@ export const Main = () => {
       <Divider sx={{marginY: 5}} />
       <Container style={{textAlign: 'center'}}>
         <Typography variant="h3" align="center" mb={5}>Build experiences that drive engagement and increase transactions</Typography>
-        <CustomLink>Watch a video<ArrowForward /></CustomLink>
+        <LinkWithArrow text="Watch a video" onClick={() => console.log('clicked')} />
       </Container>
+      <Divider sx={{marginY: 5}} />
+      <Products />
       <Divider sx={{marginY: 5}} />
       <div style={{lineHeight: 1.3}}>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, laboriosam quidem! Velit consequatur odit aspernatur? Officia distinctio ad dicta soluta at maiores molestias iusto. Nisi, doloribus? Corporis non impedit laboriosam.
