@@ -7,6 +7,7 @@ import { ProductWithImage } from './ProductWithImage';
 import { Products } from './Products';
 import { PercentageCards } from './PercentageCards';
 import { Quotes } from './Quotes';
+import { CardWithButton } from './CardWithButton';
 
 export const Main = () => {
   return (
@@ -23,6 +24,12 @@ export const Main = () => {
       <Products />
       <PercentageCards />
       <Quotes />
+      <CardWithButton
+        textFirst="Ready for"
+        textSecond="the next level?"
+        textButtonFirst="Talk to Sales"
+        textButtonSecond="Start a free trial"
+      />
     </Container>
   )
 };

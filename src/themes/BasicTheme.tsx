@@ -8,6 +8,7 @@ export const BasicTheme = createTheme({
     primary: {
       main: indigo[500],
       light: indigo[200],
+      dark: indigo[800],
     }
   },
   typography: {
