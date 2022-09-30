@@ -11,16 +11,19 @@ import { CardWithButton } from './CardWithButton';
 
 export const Main = () => {
   return (
-    <Container disableGutters maxWidth="lg" sx={{pt: {xs: 11, md: 15}}}>
+    <Container disableGutters sx={{pt: {xs: 11, md: 15}}} style={{maxWidth: '100%'}}>
       <First />
-      <Divider sx={{my: 5, mx: {xs: 2, sm: 3}}} />
+      <Container sx={{py: 5}}>
+        <Divider />
+      </Container>
       <Logos />
-      <Divider sx={{my: 5, mx: {xs: 2, sm: 3}}} />
-      <Container style={{textAlign: 'center'}}>
+      <Container sx={{py: 5}}>
+        <Divider />
+      </Container>
+      <Container style={{textAlign: 'center'}} sx={{pt: 5, pb: 10}}>
         <Typography variant="h3" align="center" mb={5}>Build experiences that drive engagement and increase transactions</Typography>
         <LinkWithArrow text="Watch a video" onClick={() => console.log('clicked')} />
       </Container>
-      <Divider sx={{my: 5, mx: {xs: 2, sm: 3}}} />
       <Products />
       <PercentageCards />
       <Quotes />

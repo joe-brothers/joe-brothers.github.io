@@ -30,11 +30,13 @@ const quotesData = [
 
 export const Quotes = () => {
   return (
+    <section style={{backgroundColor: '#f7f7f7'}}>
     <Container
-      style={{display: 'flex', gap: 20, backgroundColor: '#f7f7f7'}}
+      style={{display: 'flex', gap: 20}}
       sx={{py: 5, flexDirection: {xs: 'column', md: 'row'}}}
     >
       {quotesData.map((data) => <Quote {...data}/>)}
     </Container>
+    </section>
   )
 };
