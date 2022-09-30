@@ -30,9 +30,9 @@ const quotesData = [
 
 export const Quotes = () => {
   return (
-    <Container disableGutters
+    <Container
       style={{display: 'flex', gap: 20, backgroundColor: '#f7f7f7'}}
-      sx={{p: 5, flexDirection: {xs: 'column',md: 'row'}}}
+      sx={{py: 5, flexDirection: {xs: 'column', md: 'row'}}}
     >
       {quotesData.map((data) => <Quote {...data}/>)}
     </Container>

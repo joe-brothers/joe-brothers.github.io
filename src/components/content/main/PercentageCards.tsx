@@ -9,7 +9,7 @@ const percentageData = [
 
 export const PercentageCards = () => {
   return (
-    <Container disableGutters
+    <Container
       style={{display: 'flex', gap: 20}}
       sx={{py: 5, flexDirection: {xs: 'column', sm: 'row'}}}
     >

@@ -17,7 +17,7 @@ const logoComponents: (OverridableComponent<SvgIconTypeMap<{}, "svg">>)[] = [
 
 export const Logos = () => {
   return (
-    <Container sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+    <Container sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', px: {xs: 2, sm: 3}}}>
       {logoComponents.map((logo) => IconWithFontSize(logo, 50))}
     </Container>
   )

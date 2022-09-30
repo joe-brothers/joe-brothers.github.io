@@ -3,7 +3,7 @@ import { ProductWithImage } from './ProductWithImage';
 
 export const Products = () => {
   return (
-    <section style={{display: 'flex', flexDirection: 'column', gap: 80}}>
+    <Container style={{display: 'flex', flexDirection: 'column', gap: 80}}>
       <ProductWithImage
         imageSrc='/assets/illustration3.png'
         productName='SENDBIRD CHAT'
@@ -38,6 +38,6 @@ export const Products = () => {
         ]}
         linkText="Learn about chat support"
       />
-    </section>
+    </Container>
   )
 };
