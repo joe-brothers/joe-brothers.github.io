@@ -5,6 +5,7 @@ import { Logos } from './Logos';
 import { LinkWithArrow } from '../../LinkWithArrow';
 import { ProductWithImage } from './ProductWithImage';
 import { Products } from './Products';
+import { PercentageCards } from './PercentageCards';
 
 export const Main = () => {
   return (
@@ -19,6 +20,7 @@ export const Main = () => {
       </Container>
       <Divider sx={{marginY: 5}} />
       <Products />
+      <PercentageCards />
       <Divider sx={{marginY: 5}} />
       <div style={{lineHeight: 1.3}}>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, laboriosam quidem! Velit consequatur odit aspernatur? Officia distinctio ad dicta soluta at maiores molestias iusto. Nisi, doloribus? Corporis non impedit laboriosam.
