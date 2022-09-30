@@ -13,7 +13,7 @@ export const First = () => {
         <Button onClick={() => navigate('/games')} variant="contained" style={{width: 100, borderRadius: 30}}>Click</Button>
       </Grid>
       <Grid item xs={12} sm={6} style={{display: "flex"}}>
-        <img src="/assets/cassette.jpg" style={{display: "block", margin: "auto", width: "100%", maxWidth: 600}}/>
+        <img src="/assets/illustration4.png" style={{display: "block", margin: "auto", width: "100%", maxWidth: 600}}/>
       </Grid>
     </Grid>
   )
