@@ -3,14 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import {AppBar, Box, Button, Container, Divider, FormControl, Grid, IconButton, InputLabel, Link, Menu, MenuItem, Select, styled, Toolbar, Tooltip, Typography } from '@mui/material';
 import {Business as BusinessIcon, Menu as MenuIcon, Facebook, LinkedIn, Twitter, GitHub, YouTube } from '@mui/icons-material';
 import { SelectChangeEvent } from '@mui/material/Select';
-import { BasicTheme } from '../themes/BasicTheme';
-const {light} = BasicTheme.palette.primary;
 
 const MenuLink = styled(Link)(({theme}) => ({
   fontFamily: 'Roboto',
   textDecoration: 'none',
   '&:hover': {
-    color: light,
+    color: theme.palette.primary.light,
     cursor: 'pointer',
   }
 }));
