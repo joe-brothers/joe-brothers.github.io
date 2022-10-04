@@ -1,8 +1,19 @@
-import React from 'react';
-import {AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
-import {Business as BusinessIcon, Menu as MenuIcon} from '@mui/icons-material';
+import React from "react";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import { Business as BusinessIcon, Menu as MenuIcon } from "@mui/icons-material";
 
-const pages: string[] = ['Products', 'Solutions', 'Developer', 'Company'];
+const pages: string[] = ["Products", "Solutions", "Developer", "Company"];
 
 export const TopBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -16,10 +27,10 @@ export const TopBar = () => {
   };
 
   return (
-    <AppBar color="transparent" elevation={5} sx={{ backdropFilter:"blur(10px)" }}>
+    <AppBar color="transparent" elevation={5} sx={{ backdropFilter: "blur(10px)" }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <BusinessIcon sx={{ display: 'block', mr: 1 }} />
+          <BusinessIcon sx={{ display: "block", mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -27,17 +38,17 @@ export const TopBar = () => {
             href="/"
             sx={{
               mr: 2,
-              display: 'block',
-              fontFamily: 'Source Code Pro',
+              display: "block",
+              fontFamily: "Source Code Pro",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
             }}
           >
             Joe
           </Typography>
-          <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, justifyContent: "flex-end", display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -52,18 +63,18 @@ export const TopBar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
@@ -73,27 +84,25 @@ export const TopBar = () => {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block' }}
-              >
+              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: "inherit", display: "block" }}>
                 {page}
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'block' }}}>
+          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "block" } }}>
             <Tooltip title="I'm tooltip">
               <Button variant="text">Text</Button>
             </Tooltip>
             <Tooltip title="I'm saying blah blah">
-              <Button variant="contained" sx={{ml: 1}}>BlahBlah</Button>
+              <Button variant="contained" sx={{ ml: 1 }}>
+                BlahBlah
+              </Button>
             </Tooltip>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-    );
+  );
 };
