@@ -19,7 +19,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -28,7 +28,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -37,7 +37,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -46,7 +46,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -55,7 +55,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -64,7 +64,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -73,7 +73,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -82,7 +82,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
@@ -91,7 +91,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation.png",
+    gameImageSrc: "/assets/preparation2.png",
     onClickPlay: () => {
       return;
     },
