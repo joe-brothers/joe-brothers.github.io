@@ -9,14 +9,14 @@ export const Products = () => {
     <Container style={{ display: "flex", flexDirection: "column", gap: 80 }}>
       <ProductWithImage
         imageSrc="/assets/illustration3.png"
-        productName="SENDBIRD CHAT"
-        title="In-app chat experiences users will love"
-        explanation="An easy-to-use Chat API, native Chat SDKs, and a fully-managed chat platform on the backend means faster time-to-market."
+        productName="Games"
+        title="Fun, addictive games"
+        explanation="Conquer the world with games"
         explanationDetails={[
           "Build modern chat and messaging experiences with delivery receipts, offline messaging, presence, translation, moderation tools, and analytics.",
           "Get started quickly with Sendbird UIKit, with elegant pre-built UI components, and ship chat in days.",
         ]}
-        linkText="Learn about our chat API"
+        linkText="See our games"
         onClickLink={() => navigate("/games")}
       />
       <ProductWithImage

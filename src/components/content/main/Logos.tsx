@@ -1,5 +1,5 @@
 import { Container, SvgIconTypeMap } from "@mui/material";
-import { AttachMoney, CurrencyBitcoin, CurrencyFranc, CurrencyPound, CurrencyYen, Euro } from "@mui/icons-material";
+import { Attractions, Celebration, Cloud, Extension, SmartToy, SportsEsports } from "@mui/icons-material";
 // eslint-disable-next-line
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
@@ -11,12 +11,12 @@ const IconWithFontSize = (
 };
 
 const logoComponents: OverridableComponent<SvgIconTypeMap<Record<string, unknown>, "svg">>[] = [
-  AttachMoney,
-  Euro,
-  CurrencyFranc,
-  CurrencyPound,
-  CurrencyYen,
-  CurrencyBitcoin,
+  Cloud,
+  SportsEsports,
+  Attractions,
+  Celebration,
+  Extension,
+  SmartToy,
 ];
 
 export const Logos = () => {
