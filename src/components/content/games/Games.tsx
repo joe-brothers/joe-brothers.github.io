@@ -2,24 +2,36 @@ import { useEffect } from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import { GameCard } from "./GameCard";
 
+interface Image {
+  kind: "image";
+  gameImageSrc: string;
+  gameImageAlt: string;
+}
+interface Emoji {
+  kind: "emoji";
+  emojiString: string;
+}
+
+type Thumbnail = Image | Emoji;
+
 const gameData: {
   gameTitle: string;
   gameSummary: string;
-  gameImageSrc: string;
+  thumbnail: Thumbnail;
   onClickPlay: () => void;
   onClickShare: () => void;
 }[] = [
   {
     gameTitle: "Joe's Minesweeper",
     gameSummary: "Cute simple minesweeper game that you can peek on answers and custom your own difficulty",
-    gameImageSrc: "/assets/minesweeper.png",
+    thumbnail: { kind: "image", gameImageSrc: "/assets/minesweeper.png", gameImageAlt: "minesweeper game" },
     onClickPlay: () => (window.location.href = "https://joe-brothers.com/minesweeper/"),
     onClickShare: () => console.log("share clicked"),
   },
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "⏳" },
     onClickPlay: () => {
       return;
     },
@@ -28,7 +40,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "🔨" },
     onClickPlay: () => {
       return;
     },
@@ -37,7 +49,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "🛠️" },
     onClickPlay: () => {
       return;
     },
@@ -46,7 +58,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "🪧" },
     onClickPlay: () => {
       return;
     },
@@ -55,7 +67,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "🔧" },
     onClickPlay: () => {
       return;
     },
@@ -64,7 +76,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "⚙️" },
     onClickPlay: () => {
       return;
     },
@@ -73,7 +85,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "⚒️" },
     onClickPlay: () => {
       return;
     },
@@ -82,7 +94,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "⛏️" },
     onClickPlay: () => {
       return;
     },
@@ -91,7 +103,7 @@ const gameData: {
   {
     gameTitle: "In preparation",
     gameSummary: "We are building amazing stuffs even now. Please wait a little bit.",
-    gameImageSrc: "/assets/preparation2.png",
+    thumbnail: { kind: "emoji", emojiString: "📖" },
     onClickPlay: () => {
       return;
     },
