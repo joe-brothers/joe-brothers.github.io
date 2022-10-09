@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Container, Grid, Typography } from "@mui/material";
 
-export const First = () => {
+export const TextWithButtonAndImage = () => {
   const navigate = useNavigate();
 
   return (

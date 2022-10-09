@@ -1,18 +1,16 @@
-import React from "react";
-import { Container, Divider, Link, styled, Typography } from "@mui/material";
-import { First } from "./First";
 import { Logos } from "./Logos";
-import { LinkWithArrow } from "../../LinkWithArrow";
-import { ProductWithImage } from "./ProductWithImage";
-import { Products } from "./Products";
-import { PercentageCards } from "./PercentageCards";
 import { Quotes } from "./Quotes";
+import { Products } from "./Products";
 import { CardWithButton } from "./CardWithButton";
+import { PercentageCards } from "./PercentageCards";
+import { TextWithButtonAndImage } from "./TextWithButtonAndImage";
+import { LinkWithArrow } from "../../LinkWithArrow";
+import { Container, Divider, Typography } from "@mui/material";
 
 export const MainContent = () => {
   return (
     <Container disableGutters sx={{ pt: { xs: 11, md: 15 } }} style={{ maxWidth: "100%" }}>
-      <First />
+      <TextWithButtonAndImage />
       <Container sx={{ py: 5 }}>
         <Divider />
       </Container>

@@ -1,5 +1,5 @@
 import { Paper, Typography } from "@mui/material";
-import { basicTheme } from "../../../themes";
+import { basicTheme } from "../../../../themes";
 
 export const PercentageCard = ({ percentage, text }: { percentage: number; text: string }) => {
   return (

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { LayoutWithTopBarAndFooter } from "./layouts/LayoutWithTopBarAndFooter";
-import { MainContent, CardsContent, ErrorContent } from "./components/content";
+import { MainContent, CardsContent, ErrorContent } from "./components/contents";
 import { ThemeProvider } from "@mui/material";
 import { basicTheme } from "./themes";
 import { gameData, utilityData } from "./data";

@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { LinkWithArrow } from "../../LinkWithArrow";
+import { LinkWithArrow } from "../../../LinkWithArrow";
 
 export const ProductWithImage = ({
   isImageLeft = false,
