@@ -1,5 +1,4 @@
 import { Divider, Grid, Link, styled, Typography } from "@mui/material";
-import { Business as BusinessIcon } from "@mui/icons-material";
 import { footerMenuData } from "../../data";
 
 const MenuLink = styled(Link)(({ theme }) => ({
@@ -15,7 +14,7 @@ export const FooterMenu = () => {
   return (
     <Grid container spacing={2} columns={{ xs: 2, sm: 5 }}>
       <Grid item xs={2} sm={1}>
-        <BusinessIcon sx={{ fontSize: 70 }} />
+        <img src="assets/logo.png" width="50%" style={{ maxWidth: 80 }} />
       </Grid>
       {Object.entries(footerMenuData).map(([category, items]) => {
         return (

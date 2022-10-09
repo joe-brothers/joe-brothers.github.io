@@ -11,7 +11,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { Business as BusinessIcon, Menu as MenuIcon } from "@mui/icons-material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 const pages: { [key: string]: string }[] = [
@@ -36,7 +36,7 @@ export const TopBar = () => {
     <AppBar color="transparent" elevation={5} sx={{ backdropFilter: "blur(10px)" }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <BusinessIcon sx={{ display: "block", mr: 1 }} />
+          <img src="assets/logo.png" width={20} style={{ marginRight: 10 }} />
           <Typography
             variant="h6"
             noWrap
