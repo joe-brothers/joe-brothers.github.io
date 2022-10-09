@@ -36,55 +36,37 @@ const MenuLink = styled(Link)(({ theme }) => ({
 
 const languages: string[] = ["English", "Korean"];
 
-const footerMenu: Record<string, Record<string, string>[]> = {
-  Products: [
-    { Lorem: "/games" },
-    { ipsum: "/games" },
-    { dolor: "/games" },
-    { sit: "/games" },
-    { agsd: "/games" },
-    { werq: "/games" },
-  ],
+const footerMenu: Record<string, Record<string, () => void>[]> = {
   Solutions: [
-    { Lorem: "/games" },
-    { ipsum: "/games" },
-    { dolor: "/games" },
-    { sit: "/games" },
-    { agsd: "/games" },
-    { werq: "/games" },
+    { Marketplaces: () => console.log("tmp") },
+    { "On-demand": () => console.log("tmp") },
+    { Digital: () => console.log("tmp") },
+    { "Live Streaming": () => console.log("tmp") },
+    { "Financial services": () => console.log("tmp") },
+  ],
+  Resources: [{ Customers: () => console.log("tmp") }, { "Security & Compliance": () => console.log("tmp") }],
+  Games: [
+    { Minesweeper: () => console.log("tmp") },
+    { Pinball: () => console.log("tmp") },
+    { "Spider Solitaire": () => console.log("tmp") },
+    { Ranking: () => console.log("tmp") },
+    { Community: () => console.log("tmp") },
   ],
   Developer: [
-    { absdf: "/games" },
-    { qweqtwe: "/games" },
-    { fghjty: "/games" },
-    { dfg: "/games" },
-    { agassd: "/games" },
-    { werq: "/games" },
-  ],
-  Resources: [
-    { adtr: "/games" },
-    { sdfas: "/games" },
-    { xcvs: "/games" },
-    { "hi hi hi hi hi hi": "/games" },
-    { zxzzxv: "/games" },
-    { werw: "/games" },
+    { "Developer Portal": () => console.log("tmp") },
+    { Documentation: () => console.log("tmp") },
+    { Demos: () => console.log("tmp") },
+    { Tutorials: () => console.log("tmp") },
+    { FAQ: () => console.log("tmp") },
   ],
   Company: [
-    { agw: "/games" },
-    { vvvv: "/games" },
-    { asdf: "/games" },
-    { aah: "/games" },
-    { asdfsd: "/games" },
-    { eeee: "/games" },
+    { About: () => console.log("tmp") },
+    { Careers: () => console.log("tmp") },
+    { Blog: () => console.log("tmp") },
+    { Events: () => console.log("tmp") },
+    { "Contact Us": () => console.log("tmp") },
   ],
-  Support: [
-    { asdfs: "/games" },
-    { sdaf: "/games" },
-    { sss: "/games" },
-    { sit: "/games" },
-    { agsd: "/games" },
-    { aaaaaaa: "/games" },
-  ],
+  Support: [{ "Help Center": () => console.log("tmp") }, { "Support Policy": () => console.log("tmp") }],
 };
 
 const links: { [key: string]: string } = {
@@ -116,7 +98,7 @@ export const Footer = () => {
                 {items.map((item) => {
                   return Object.entries(item).map(([key, value]) => (
                     <li style={{ wordBreak: "break-word" }}>
-                      <MenuLink onClick={() => navigate(value)}>{key}</MenuLink>
+                      <MenuLink onClick={() => value()}>{key}</MenuLink>
                     </li>
                   ));
                 })}

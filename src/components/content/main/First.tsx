@@ -11,7 +11,7 @@ export const First = () => {
           <Typography variant="h3" sx={{ fontWeight: 500 }}>
             We make apps
           </Typography>
-          <Typography>We are Joe Brothers, makes fun and useful apps and games</Typography>
+          <Typography>We are Joe Brothers, makes fun and useful apps and games.</Typography>
           <Button onClick={() => navigate("/games")} variant="contained" style={{ width: 100, borderRadius: 30 }}>
             Click
           </Button>

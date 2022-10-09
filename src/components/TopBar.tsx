@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { Business as BusinessIcon, Menu as MenuIcon } from "@mui/icons-material";
 
-const pages: string[] = ["Products", "Solutions", "Developer", "Company"];
+const pages: string[] = ["Solutions", "Resources", "Developer", "Company"];
 
 export const TopBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

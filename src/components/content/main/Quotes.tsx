@@ -4,30 +4,27 @@ import { Quote } from "./Quote";
 const quotesData = [
   {
     logoSrc: "/assets/illustration1.png",
-    quote:
-      "Sendbird powers our core transaction flows via a fast and reliable messaging layer between our buyers and sellers.",
-    position: "Head of Engineering",
-    company: "Carousell",
+    quote: "Their games are fun, pretty, amazing.",
+    position: "One of my friends",
+    company: "Jane Doe",
   },
   {
     logoSrc: "/assets/illustration2.png",
-    quote:
-      "With Sendbird we provide a 100% digital customer support experience for our customers with native in-app chat based interactions.",
-    position: "Senior Manager",
-    company: "Virgin Mobile UAE",
+    quote: "If possible, I'd would love to hire them with $1 million salary.",
+    position: "Boss of some company",
+    company: "John Doe",
   },
   {
     logoSrc: "/assets/illustration3.png",
-    quote:
-      "Sendbird’s client base gave us confidence that they would be able to handle our traffic and projected growth.",
-    position: "CTO",
-    company: "Hinge",
+    quote: "Their games are truly fun, pretty, amazing.",
+    position: "Our loyal customer",
+    company: "Mark",
   },
   {
     logoSrc: "/assets/illustration4.png",
-    quote: "With Sendbird’s developer-friendly chat API and SDKs we were quickly able to build in-app chat.",
-    position: "Director of Product Management",
-    company: "Accolade",
+    quote: "With Joe's apps, my life got much easier. Thank you, Joe Brothers!",
+    position: "Reviewer",
+    company: "Scarlette",
   },
 ];
 

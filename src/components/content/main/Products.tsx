@@ -9,40 +9,39 @@ export const Products = () => {
     <Container style={{ display: "flex", flexDirection: "column", gap: 80 }}>
       <ProductWithImage
         imageSrc="/assets/illustration3.png"
-        productName="Games"
+        productName="JOE'S GAMES"
         title="Fun, addictive games"
         explanation="Conquer the world with games"
         explanationDetails={[
-          "Build modern chat and messaging experiences with delivery receipts, offline messaging, presence, translation, moderation tools, and analytics.",
-          "Get started quickly with Sendbird UIKit, with elegant pre-built UI components, and ship chat in days.",
+          "Your time will disappear in the blink of an eye.",
+          "Your time might disappear in less than a blink of an eye.",
         ]}
         linkText="See our games"
         onClickLink={() => navigate("/games")}
       />
       <ProductWithImage
         isImageLeft={true}
-        imageSrc="/assets/illustration1.png"
-        productName="SENDBIRD CALLS"
-        title="In-app voice and video calls"
-        explanation="From healthcare to dating to customer service, connecting users with our voice and video APIs has never been easier."
-        explanationDetails={[
-          "Clear faces. No lags. Sendbird Calls for voice and video just works so your users get to socialize in your app as they would in real life.",
-          "Combine chat, voice, and video so users get access to all the right experiences they have come to expect.",
-        ]}
-        linkText="Learn about our voice API and video API"
-        onClickLink={() => navigate("/games")}
+        imageSrc="/assets/illustration5.png"
+        productName="JOE'S UTILITIES"
+        title="Useful websites and mobile apps"
+        explanation="From mini google docs to impermanent loss calculator."
+        explanationDetails={["Make your life easier", "Simple and intuitive user interfaces"]}
+        linkText="Look around our utility apps"
+        onClickLink={() => {
+          return;
+        }}
       />
       <ProductWithImage
-        imageSrc="/assets/illustration5.png"
-        productName="SENDBIRD DESK"
-        title="Easy in-app chat support for your customers"
-        explanation="Power live chat support right within your app’s messaging experience. Push notifications keep your customers informed and engaged."
+        imageSrc="/assets/illustration1.png"
+        productName="JOE'S FUTURE"
+        title="Making the progress"
+        explanation="We are building things that would change all the aspects of the world."
         explanationDetails={[
-          "Deliver on-demand chat support in-app and in-context of their issue for easier faster resolutions.",
-          "Intuitive agent interface to manage the queue, route support tickets, view customer context, and monitor responses.",
+          "We don't follow the rules to win. We make rules that we win.",
+          "If you want to join our groundbreaking plan, please send your resume to contact@joe-brothers.com",
         ]}
-        linkText="Learn about chat support"
-        onClickLink={() => navigate("/games")}
+        linkText="Contact Joe Brothers"
+        onClickLink={() => window.open("mailto:contact@joe-brothers.com")}
       />
     </Container>
   );
