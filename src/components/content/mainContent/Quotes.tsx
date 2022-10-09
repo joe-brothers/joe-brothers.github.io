@@ -33,7 +33,7 @@ export const Quotes = () => {
     <section style={{ backgroundColor: "#f7f7f7" }}>
       <Container style={{ display: "flex", gap: 20 }} sx={{ py: 5, flexDirection: { xs: "column", md: "row" } }}>
         {quotesData.map((data) => (
-          <Quote {...data} />
+          <Quote key={`quote_${data.company}`} {...data} />
         ))}
       </Container>
     </section>

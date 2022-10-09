@@ -91,13 +91,13 @@ export const Footer = () => {
         </Grid>
         {Object.entries(footerMenu).map(([category, items]) => {
           return (
-            <Grid item xs={1}>
+            <Grid key={`menu_footer_${category}`} item xs={1}>
               <Typography>{category}</Typography>
               <Divider sx={{ my: 1 }} />
               <ul style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {items.map((item) => {
                   return Object.entries(item).map(([key, value]) => (
-                    <li style={{ wordBreak: "break-word" }}>
+                    <li key={`menu_footer_${category}_${key}`} style={{ wordBreak: "break-word" }}>
                       <MenuLink onClick={() => value()}>{key}</MenuLink>
                     </li>
                   ));
@@ -114,7 +114,7 @@ export const Footer = () => {
         <Box sx={{ flexGrow: 1 }}>
           <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none" }}>
             {Object.entries(links).map(([key, value]) => (
-              <li>
+              <li key={`footer_link_${key}`}>
                 <MenuLink onClick={() => navigate(value)}>{key}</MenuLink>
               </li>
             ))}
@@ -131,7 +131,7 @@ export const Footer = () => {
               onChange={onChangeLanguage}
             >
               {languages.map((lang) => (
-                <MenuItem key={`menuitem_${lang}`} value={lang}>
+                <MenuItem key={`menuitem_lang_${lang}`} value={lang}>
                   {lang}
                 </MenuItem>
               ))}

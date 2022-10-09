@@ -32,8 +32,8 @@ export const ProductWithImage = ({
         </Typography>
         <Typography>{explanation}</Typography>
         <ul style={{ listStyle: "disc inside" }}>
-          {explanationDetails.map((exp) => (
-            <li>
+          {explanationDetails.map((exp, idx) => (
+            <li key={`product_${productName}_${idx}`}>
               <Typography sx={{ display: "inline" }}>{exp}</Typography>
             </li>
           ))}

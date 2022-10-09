@@ -6,8 +6,9 @@ import { OverridableComponent } from "@mui/material/OverridableComponent";
 const IconWithFontSize = (
   Icon: OverridableComponent<SvgIconTypeMap<Record<string, unknown>, "svg">>,
   fontSize: number,
+  key: number,
 ) => {
-  return <Icon sx={{ fontSize }} />;
+  return <Icon key={`icon_${key}`} sx={{ fontSize }} />;
 };
 
 const logoComponents: OverridableComponent<SvgIconTypeMap<Record<string, unknown>, "svg">>[] = [
@@ -22,7 +23,7 @@ const logoComponents: OverridableComponent<SvgIconTypeMap<Record<string, unknown
 export const Logos = () => {
   return (
     <Container sx={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", px: { xs: 2, sm: 3 } }}>
-      {logoComponents.map((logo) => IconWithFontSize(logo, 50))}
+      {logoComponents.map((logo, idx) => IconWithFontSize(logo, 50, idx))}
     </Container>
   );
 };
