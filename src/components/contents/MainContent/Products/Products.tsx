@@ -1,6 +1,8 @@
 import { Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { ProductWithImage } from "./ProductWithImage";
+import { openLinkInNewTab } from "../../../../utils";
+import { links } from "../../../../data";
 
 export const Products = () => {
   const navigate = useNavigate();
@@ -39,7 +41,7 @@ export const Products = () => {
           "If you want to join our groundbreaking plan, please send your resume to contact@joe-brothers.com",
         ]}
         linkText="Contact Joe Brothers"
-        onClickLink={() => window.open("mailto:contact@joe-brothers.com")}
+        onClickLink={() => openLinkInNewTab(links.Mail)}
       />
     </Container>
   );

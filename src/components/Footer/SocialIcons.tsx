@@ -1,5 +1,7 @@
 import { Facebook, LinkedIn, Twitter, GitHub, YouTube } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
+import { links } from "../../data";
+import { openLinkInNewTab } from "../../utils";
 
 export const SocialIcons = () => {
   return (
@@ -16,7 +18,7 @@ export const SocialIcons = () => {
       <IconButton>
         <YouTube />
       </IconButton>
-      <IconButton onClick={() => window.open("https://github.com/joe-brothers/joe-brothers.github.io", "_blank")}>
+      <IconButton onClick={() => openLinkInNewTab(links.GitHub)}>
         <GitHub />
       </IconButton>
     </>

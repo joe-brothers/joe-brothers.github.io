@@ -1,5 +1,7 @@
 import { Divider, Grid, Link, styled, Typography } from "@mui/material";
 import { Business as BusinessIcon } from "@mui/icons-material";
+import { openLinkInNewTab } from "../../utils";
+import { links } from "../../data";
 
 const MenuLink = styled(Link)(({ theme }) => ({
   fontFamily: "Roboto",
@@ -12,38 +14,34 @@ const MenuLink = styled(Link)(({ theme }) => ({
 
 const footerMenuData: Record<string, Record<string, () => void>[]> = {
   Games: [
-    { Minesweeper: () => window.open("https://joe-brothers.com/minesweeper/", "_blank") },
-    { Pinball: () => console.log("tmp") },
-    { "Spider Solitaire": () => console.log("tmp") },
-    { Ranking: () => console.log("tmp") },
-    { Community: () => console.log("tmp") },
+    { Minesweeper: () => openLinkInNewTab(links.game.minesweeper) },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
   ],
   Utilities: [
     {
-      "Impermenant Loss Calculator": () =>
-        window.open(
-          "https://play.google.com/store/apps/details?id=com.joebrothers.impermanent_loss_calculator&hl=en_US&gl=US",
-          "_blank",
-        ),
+      "Impermenant Loss Calculator": () => openLinkInNewTab(links.utility.impermanent),
     },
-    { "in preparation": () => console.log("tmp") },
-    { "in preparation": () => console.log("tmp") },
-    { "in preparation": () => console.log("tmp") },
-    { "in preparation": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
   ],
   Developer: [
-    { "Developer Portal": () => console.log("tmp") },
-    { Documentation: () => console.log("tmp") },
-    { Demos: () => console.log("tmp") },
-    { Tutorials: () => console.log("tmp") },
-    { FAQ: () => console.log("tmp") },
+    { "GitHub Organization": () => openLinkInNewTab(links.GitHub) },
+    { "Google Play": () => openLinkInNewTab(links.GooglePlay) },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
   ],
   Company: [
     { About: () => console.log("tmp") },
     { Careers: () => console.log("tmp") },
     { Blog: () => console.log("tmp") },
     { Events: () => console.log("tmp") },
-    { "Contact Us": () => console.log("tmp") },
+    { "Contact Us": () => openLinkInNewTab(links.Mail) },
   ],
 };
 
