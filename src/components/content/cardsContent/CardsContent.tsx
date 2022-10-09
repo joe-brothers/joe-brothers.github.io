@@ -3,7 +3,7 @@ import { CardWithThumbnail } from "./CardWithThumbnail";
 import type { CardWithThumbnailData } from "../../../types";
 import { Container, Grid, Typography } from "@mui/material";
 
-export const Cards = ({ pageTitle, cardsData }: { pageTitle: string; cardsData: CardWithThumbnailData }) => {
+export const CardsContent = ({ pageTitle, cardsData }: { pageTitle: string; cardsData: CardWithThumbnailData }) => {
   useEffect(() => window.scroll({ top: 0 }), []);
 
   return (

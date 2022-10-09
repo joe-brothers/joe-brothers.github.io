@@ -1,5 +1,5 @@
-import { Main } from "./main";
-import { Cards } from "./cards";
-import { Error } from "./error";
+import { MainContent } from "./mainContent";
+import { CardsContent } from "./cardsContent";
+import { ErrorContent } from "./errorContent";
 
-export { Main, Cards, Error };
+export { MainContent, CardsContent, ErrorContent };

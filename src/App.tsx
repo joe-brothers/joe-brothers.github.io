@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { LayoutWithTopBarAndFooter } from "./layouts/LayoutWithTopBarAndFooter";
-import { Main, Cards, Error } from "./components/content";
+import { MainContent, CardsContent, ErrorContent } from "./components/content";
 import { ThemeProvider } from "@mui/material";
 import { basicTheme } from "./themes";
 import { gameData, utilityData } from "./data";
@@ -11,13 +11,13 @@ export const App = () => {
     <ThemeProvider theme={basicTheme}>
       <Routes>
         <Route path="" element={<LayoutWithTopBarAndFooter />}>
-          <Route index element={<Main />} />
+          <Route index element={<MainContent />} />
           <Route
             path="games"
-            element={<Cards pageTitle={"✨🎲 Here you can enjoy our games! 🎮🙌"} cardsData={gameData} />}
+            element={<CardsContent pageTitle={"✨🎲 Here you can enjoy our games! 🎮🙌"} cardsData={gameData} />}
           />
-          <Route path="utility" element={<Cards pageTitle={"💡🕰️ Utility 🧮📱"} cardsData={utilityData} />} />
-          <Route path="*" element={<Error emoji={"😶‍🌫️"} message={"This path doesn't exist."} />} />
+          <Route path="utility" element={<CardsContent pageTitle={"💡🕰️ Utility 🧮📱"} cardsData={utilityData} />} />
+          <Route path="*" element={<ErrorContent emoji={"😶‍🌫️"} message={"This path doesn't exist."} />} />
         </Route>
       </Routes>
     </ThemeProvider>

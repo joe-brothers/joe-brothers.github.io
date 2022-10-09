@@ -9,7 +9,7 @@ import { PercentageCards } from "./PercentageCards";
 import { Quotes } from "./Quotes";
 import { CardWithButton } from "./CardWithButton";
 
-export const Main = () => {
+export const MainContent = () => {
   return (
     <Container disableGutters sx={{ pt: { xs: 11, md: 15 } }} style={{ maxWidth: "100%" }}>
       <First />
