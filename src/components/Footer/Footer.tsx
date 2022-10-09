@@ -71,7 +71,7 @@ const footerMenu: Record<string, Record<string, () => void>[]> = {
 
 const links: { [key: string]: string } = {
   "Terms of Service": "/games",
-  "Privacy Policy": "/games",
+  "Privacy Policy": "/privacy-policy",
   "Cookie Settings": "/games",
   "Sub-Processors": "/games",
 };
