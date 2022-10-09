@@ -31,9 +31,11 @@ export const ProductWithImage = ({
           {title}
         </Typography>
         <Typography>{explanation}</Typography>
-        <ul>
+        <ul style={{ listStyle: "disc inside" }}>
           {explanationDetails.map((exp) => (
-            <li>{exp}</li>
+            <li>
+              <Typography sx={{ display: "inline" }}>{exp}</Typography>
+            </li>
           ))}
         </ul>
         <LinkWithArrow text={linkText} onClick={onClickLink} />

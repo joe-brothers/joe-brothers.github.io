@@ -18,11 +18,13 @@ export const Quote = ({
     >
       <div>
         <img src={logoSrc} style={{ height: 100 }} />
-        <Typography>"{quote}"</Typography>
+        <Typography mt={1} fontStyle="italic">
+          "{quote}"
+        </Typography>
       </div>
       <div>
-        <Typography mt={1}>{position}</Typography>
-        <Typography>{company}</Typography>
+        <Typography mt={2}>{position}</Typography>
+        <Typography fontWeight={500}>{company}</Typography>
       </div>
     </Paper>
   );
