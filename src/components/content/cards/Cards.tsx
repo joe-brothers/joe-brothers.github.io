@@ -7,7 +7,7 @@ export const Cards = ({ pageTitle, cardsData }: { pageTitle: string; cardsData: 
   useEffect(() => window.scroll({ top: 0 }), []);
 
   return (
-    <Container maxWidth="lg" sx={{ pt: { xs: 11, md: 15 } }}>
+    <Container maxWidth="lg" sx={{ pt: { xs: 11, md: 15 }, pb: 15 }}>
       <Typography align="center" variant="h4" mb={{ xs: 5, md: 8 }}>
         {pageTitle}
       </Typography>

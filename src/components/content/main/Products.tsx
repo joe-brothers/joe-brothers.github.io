@@ -27,9 +27,7 @@ export const Products = () => {
         explanation="From mini google docs to impermanent loss calculator."
         explanationDetails={["Make your life easier", "Simple and intuitive user interfaces"]}
         linkText="Look around our utility apps"
-        onClickLink={() => {
-          return;
-        }}
+        onClickLink={() => navigate("/utility")}
       />
       <ProductWithImage
         imageSrc="/assets/illustration1.png"
