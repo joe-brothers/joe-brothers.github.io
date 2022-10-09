@@ -187,7 +187,7 @@ export const footerMenuData: Record<string, Record<string, () => void>[]> = {
     { "-": () => console.log("tmp") },
   ],
   Company: [
-    { About: () => console.log("tmp") },
+    { About: () => openLinkInNewTab(`${process.env.PUBLIC_URL}/#/company`) },
     { "Contact Us": () => openLinkInNewTab(links.Mail) },
     { "-": () => console.log("tmp") },
     { "-": () => console.log("tmp") },

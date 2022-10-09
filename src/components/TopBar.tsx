@@ -18,7 +18,7 @@ const pages: { [key: string]: string }[] = [
   { Games: "/games" },
   { Utilities: "/utility" },
   { Developer: "/" },
-  { Company: "/" },
+  { Company: "/company" },
 ];
 
 export const TopBar = () => {
