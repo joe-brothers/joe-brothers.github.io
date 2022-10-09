@@ -1,7 +1,6 @@
 import { Divider, Grid, Link, styled, Typography } from "@mui/material";
 import { Business as BusinessIcon } from "@mui/icons-material";
-import { openLinkInNewTab } from "../../utils";
-import { links } from "../../data";
+import { footerMenuData } from "../../data";
 
 const MenuLink = styled(Link)(({ theme }) => ({
   fontFamily: "Roboto",
@@ -11,39 +10,6 @@ const MenuLink = styled(Link)(({ theme }) => ({
     cursor: "pointer",
   },
 }));
-
-const footerMenuData: Record<string, Record<string, () => void>[]> = {
-  Games: [
-    { Minesweeper: () => openLinkInNewTab(links.game.minesweeper) },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-  ],
-  Utilities: [
-    {
-      "Impermenant Loss Calculator": () => openLinkInNewTab(links.utility.impermanent),
-    },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-  ],
-  Developer: [
-    { "GitHub Organization": () => openLinkInNewTab(links.GitHub) },
-    { "Google Play": () => openLinkInNewTab(links.GooglePlay) },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-    { "-": () => console.log("tmp") },
-  ],
-  Company: [
-    { About: () => console.log("tmp") },
-    { Careers: () => console.log("tmp") },
-    { Blog: () => console.log("tmp") },
-    { Events: () => console.log("tmp") },
-    { "Contact Us": () => openLinkInNewTab(links.Mail) },
-  ],
-};
 
 export const FooterMenu = () => {
   return (
@@ -58,9 +24,9 @@ export const FooterMenu = () => {
             <Divider sx={{ my: 1 }} />
             <ul style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {items.map((item) => {
-                return Object.entries(item).map(([key, value]) => (
-                  <li key={`menu_footer_${category}_${key}`} style={{ wordBreak: "break-word" }}>
-                    <MenuLink onClick={() => value()}>{key}</MenuLink>
+                return Object.entries(item).map(([text, onClick]) => (
+                  <li key={`menu_footer_${category}_${text}`} style={{ wordBreak: "break-word" }}>
+                    <MenuLink onClick={() => onClick()}>{text}</MenuLink>
                   </li>
                 ));
               })}

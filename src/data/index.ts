@@ -161,3 +161,36 @@ export const utilityData: CardWithThumbnailData = [
     onClickShare: () => console.log("share clicked"),
   },
 ];
+
+export const footerMenuData: Record<string, Record<string, () => void>[]> = {
+  Games: [
+    { Minesweeper: () => openLinkInNewTab(links.game.minesweeper) },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+  ],
+  Utilities: [
+    {
+      "Impermenant Loss Calculator": () => openLinkInNewTab(links.utility.impermanent),
+    },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+  ],
+  Developer: [
+    { "GitHub Organization": () => openLinkInNewTab(links.GitHub) },
+    { "Google Play": () => openLinkInNewTab(links.GooglePlay) },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+  ],
+  Company: [
+    { About: () => console.log("tmp") },
+    { "Contact Us": () => openLinkInNewTab(links.Mail) },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+    { "-": () => console.log("tmp") },
+  ],
+};
