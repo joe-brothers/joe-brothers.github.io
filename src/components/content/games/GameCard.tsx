@@ -18,7 +18,7 @@ const getThumbnail = (thumbnail: Thumbnail) => {
       return <CardMedia component="img" image={thumbnail.gameImageSrc} alt={thumbnail.gameImageAlt} />;
     case "emoji":
       return (
-        <CardContent sx={{ position: "relative", height: "150px", backgroundColor: "#e6e6e6" }}>
+        <CardContent sx={{ position: "relative", height: "150px", backgroundColor: "#e6e6e6", userSelect: "none" }}>
           <div
             style={{
               fontSize: "3rem",
