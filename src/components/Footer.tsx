@@ -151,7 +151,7 @@ export const Footer = () => {
           <IconButton>
             <YouTube />
           </IconButton>
-          <IconButton>
+          <IconButton onClick={() => window.open("https://github.com/joe-brothers/joe-brothers.github.io", "_blank")}>
             <GitHub />
           </IconButton>
         </Box>

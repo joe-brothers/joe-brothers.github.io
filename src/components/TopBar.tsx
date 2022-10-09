@@ -12,16 +12,22 @@ import {
   Typography,
 } from "@mui/material";
 import { Business as BusinessIcon, Menu as MenuIcon } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
-const pages: string[] = ["Solutions", "Resources", "Developer", "Company"];
+const pages: { [key: string]: string }[] = [
+  { Games: "/games" },
+  { Utilities: "/utility" },
+  { Developer: "/" },
+  { Company: "/" },
+];
 
 export const TopBar = () => {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -78,16 +84,29 @@ export const TopBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={`menu_side_${Object.entries(page)[0][0]}`}
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    navigate(Object.entries(page)[0][1]);
+                  }}
+                >
+                  <Typography textAlign="center">{Object.entries(page)[0][0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: "inherit", display: "block" }}>
-                {page}
+              <Button
+                key={`menu_center_${Object.entries(page)[0][0]}`}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  navigate(Object.entries(page)[0][1]);
+                }}
+                sx={{ my: 2, color: "inherit", display: "block" }}
+              >
+                {Object.entries(page)[0][0]}
               </Button>
             ))}
           </Box>
