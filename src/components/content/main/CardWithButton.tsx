@@ -1,5 +1,5 @@
 import { Button, Paper, styled, Typography } from "@mui/material";
-import { BasicTheme } from "../../../themes/BasicTheme";
+import { basicTheme } from "../../../themes";
 
 export const CardWithButton = ({
   textFirst,
@@ -20,7 +20,7 @@ export const CardWithButton = ({
         py: 10,
         borderRadius: 4,
         color: "white",
-        backgroundColor: BasicTheme.palette.primary.main,
+        backgroundColor: basicTheme.palette.primary.main,
         flexDirection: { xs: "column", md: "row" },
         textAlign: { xs: "center", md: "left" },
         gap: { xs: 5, md: 0 },
@@ -33,7 +33,7 @@ export const CardWithButton = ({
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 20 }}>
         <Button
           variant="contained"
-          style={{ borderRadius: 30, backgroundColor: "white", color: BasicTheme.palette.primary.dark }}
+          style={{ borderRadius: 30, backgroundColor: "white", color: basicTheme.palette.primary.dark }}
         >
           {textButtonFirst}
         </Button>

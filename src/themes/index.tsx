@@ -3,7 +3,7 @@ import { indigo } from "@mui/material/colors";
 
 const theme = createTheme();
 
-export const BasicTheme = createTheme({
+export const basicTheme = createTheme({
   palette: {
     primary: {
       main: indigo[500],

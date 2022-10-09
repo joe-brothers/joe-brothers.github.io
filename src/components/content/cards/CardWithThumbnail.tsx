@@ -1,21 +1,10 @@
 import { Card, CardMedia, CardContent, Typography, CardActions, Button } from "@mui/material";
-
-interface Image {
-  kind: "image";
-  gameImageSrc: string;
-  gameImageAlt: string;
-}
-interface Emoji {
-  kind: "emoji";
-  emojiString: string;
-}
-
-type Thumbnail = Image | Emoji;
+import { Thumbnail } from "../../../types";
 
 const getThumbnail = (thumbnail: Thumbnail) => {
   switch (thumbnail.kind) {
     case "image":
-      return <CardMedia component="img" image={thumbnail.gameImageSrc} alt={thumbnail.gameImageAlt} />;
+      return <CardMedia component="img" image={thumbnail.imageSrc} alt={thumbnail.imageAlt} />;
     case "emoji":
       return (
         <CardContent sx={{ position: "relative", height: "150px", backgroundColor: "#e6e6e6", userSelect: "none" }}>
@@ -37,15 +26,15 @@ const getThumbnail = (thumbnail: Thumbnail) => {
   }
 };
 
-export const GameCard = ({
-  gameTitle,
-  gameSummary,
+export const CardWithThumbnail = ({
+  title,
+  summary,
   thumbnail,
   onClickPlay,
   onClickShare,
 }: {
-  gameTitle: string;
-  gameSummary: string;
+  title: string;
+  summary: string;
   thumbnail: Thumbnail;
   onClickPlay: () => void;
   onClickShare: () => void;
@@ -55,10 +44,10 @@ export const GameCard = ({
       {getThumbnail(thumbnail)}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {gameTitle}
+          {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {gameSummary}
+          {summary}
         </Typography>
       </CardContent>
       <CardActions>

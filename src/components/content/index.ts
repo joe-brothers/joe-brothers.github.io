@@ -1,4 +1,4 @@
 import { Main } from "./main";
-import { Games } from "./games";
+import { Cards } from "./cards";
 
-export { Main, Games };
+export { Main, Cards };
