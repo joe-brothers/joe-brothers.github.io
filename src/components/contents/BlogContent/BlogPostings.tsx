@@ -2,6 +2,7 @@ import { ArrowBack } from "@mui/icons-material";
 import { Button, Container, Paper, Typography } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import { blogPostingData } from "../../../data";
+import { MarkdownRenderer } from "./MarkdownRenderer";
 
 export const BlogPostings = () => {
   window.scroll({ top: 0 });
@@ -24,7 +25,7 @@ export const BlogPostings = () => {
             return (
               <Paper elevation={3} style={{ padding: 10 }}>
                 <Typography variant="h5">{data.title}</Typography>
-                <Typography mt={1}>{data.content}</Typography>
+                <MarkdownRenderer>{data.content}</MarkdownRenderer>
               </Paper>
             );
           }

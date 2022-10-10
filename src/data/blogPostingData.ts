@@ -6,7 +6,27 @@ interface BlogPostingData {
 }
 
 export const blogPostingData: BlogPostingData[] = [
-  { createdAt: 1665334210000, category: "cpp", title: "title1 c++", content: "content1 c++" },
+  {
+    createdAt: 1665334210000,
+    category: "cpp",
+    title: "title1 c++",
+    content: `
+  # 헤딩
+  
+  **굵게**
+  
+  일반 텍스트
+  \`\`\`
+    hello world
+  \`\`\`
+    
+  *기울이기*
+  
+  글자 \`배경색\`
+    
+  > 인용문
+  `,
+  },
   { createdAt: 1665344210000, category: "cpp", title: "title2 c++", content: "content2 c++" },
   { createdAt: 1665354210000, category: "cpp", title: "title3 c++", content: "content3 c++" },
   { createdAt: 1665364200000, category: "cpp", title: "title4 c++", content: "content4 c++" },
