@@ -17,7 +17,7 @@ const MenuLink = styled(Link)(({ theme }) => ({
 const languages: string[] = ["English", "Korean"];
 
 const links: { [key: string]: string } = {
-  "Terms of Service": "/",
+  "ABCDEFGH": "/",
   "Privacy Policy": "/privacy-policy",
   "Cookie Settings": "/",
   "Sub-Processors": "/",
