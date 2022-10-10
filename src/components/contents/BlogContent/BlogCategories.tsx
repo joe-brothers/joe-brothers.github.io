@@ -7,7 +7,7 @@ const categoryData = [
   { title: "Python", image: "/assets/logo-python.png", link: "python" },
 ];
 
-export const BlogContent = () => {
+export const BlogCategories = () => {
   window.scroll({ top: 0 });
   const navigate = useNavigate();
 

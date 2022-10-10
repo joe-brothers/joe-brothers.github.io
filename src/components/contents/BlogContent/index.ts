@@ -1,3 +1,4 @@
-import { BlogContent } from "./BlogContent";
+import { BlogCategories } from "./BlogCategories";
+import { BlogPostings } from "./BlogPostings";
 
-export { BlogContent };
+export { BlogCategories, BlogPostings };

@@ -3,10 +3,11 @@ import { LayoutWithTopBarAndFooter } from "./layouts/LayoutWithTopBarAndFooter";
 import {
   MainContent,
   CardsContent,
-  BlogContent,
   ErrorContent,
   PrivacyContent,
   CompanyContent,
+  BlogCategories,
+  BlogPostings,
 } from "./components/contents";
 import { gameData, utilityData } from "./data";
 import { ThemeProvider } from "@mui/material";
@@ -24,7 +25,8 @@ export const App = () => {
             element={<CardsContent pageTitle={"✨🎲 Here you can enjoy our games! 🎮🙌"} cardsData={gameData} />}
           />
           <Route path="utility" element={<CardsContent pageTitle={"💡🕰️ Utility 🧮📱"} cardsData={utilityData} />} />
-          <Route path="blog" element={<BlogContent />} />
+          <Route path="blog" element={<BlogCategories />} />
+          <Route path="blog/:category" element={<BlogPostings />} />
           <Route path="company" element={<CompanyContent />} />
           <Route path="privacy-policy" element={<PrivacyContent />} />
           <Route path="*" element={<ErrorContent emoji={"😶‍🌫️"} message={"This path doesn't exist."} />} />
