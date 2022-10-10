@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 const pages: { [key: string]: string }[] = [
   { Games: "/games" },
   { Utilities: "/utility" },
-  { Developer: "/" },
+  { Blog: "/blog" },
   { Company: "/company" },
 ];
 
