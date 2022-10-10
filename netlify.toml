@@ -3,7 +3,7 @@
     publish = "build/"
 
 [build.environment]
-    CI = false
+    CI = "false"
 
 [context.branch-deploy]
     ignore = "bash ./build-ignore.sh"
