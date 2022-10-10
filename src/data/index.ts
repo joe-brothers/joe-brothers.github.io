@@ -1,7 +1,6 @@
 import type { CardWithThumbnailData } from "../types";
 import { openLinkInNewTab } from "../utils";
 import { blogPostingData } from "./blogPostingData";
-export { blogPostingData };
 
 export const links = {
   GooglePlay: "https://play.google.com/store/apps/dev?id=8562056654217636569&hl=en_US&gl=US",
@@ -196,3 +195,5 @@ export const footerMenuData: Record<string, Record<string, () => void>[]> = {
     // { "-": () => console.log("tmp") },
   ],
 };
+
+export { blogPostingData };
