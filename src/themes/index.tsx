@@ -1,14 +1,14 @@
 import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
+import { green } from "@mui/material/colors";
 
 const theme = createTheme();
 
 export const basicTheme = createTheme({
   palette: {
     primary: {
-      main: red[500],
-      light: red[200],
-      dark: red[800],
+      main: green[500],
+      light: green[200],
+      dark: green[800],
     },
   },
   typography: {
