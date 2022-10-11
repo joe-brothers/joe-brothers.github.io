@@ -14,13 +14,13 @@
 
 ```
 npm install
-user:~$ npm start
+npm start
 ```
 
 Runs the app in the development mode.
 
 ```
-user:~$ npm run build
+npm run build
 ```
 
 Builds the app for production to the `dist` folder.
