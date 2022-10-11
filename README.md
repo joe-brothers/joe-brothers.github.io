@@ -1,8 +1,8 @@
 # joe-brothers.github.io
 
-Landing page of Joe Brothers, Inc.
+[![Deploy React with Github Actions](https://github.com/joe-brothers/joe-brothers.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/joe-brothers/joe-brothers.github.io/actions/workflows/pages.yml)
 
-[Deploy Link](https://joe-brothers.com/)
+Landing page of Joe Brothers, Inc.
 
 ## Tech Stack
 
