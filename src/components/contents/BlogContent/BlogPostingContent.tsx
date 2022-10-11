@@ -2,7 +2,7 @@ import { ArrowBack } from "@mui/icons-material";
 import { Button, Container, Paper, Typography } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import { blogPostingData } from "../../../data";
-import { BlogPostingData, isCategory } from "../../../data/blogPostingData";
+import { BlogPostingData, CategoryEnum, isCategory } from "../../../data/blogPostingData";
 import { ErrorContent } from "../ErrorContent";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 
@@ -25,14 +25,18 @@ export const BlogPostingContent = () => {
         <Button onClick={() => navigate(`/blog/${category}`)} startIcon={<ArrowBack />}>
           Back
         </Button>
-        <Typography style={{ display: "inline" }} ml={5}>
-          {category} postings
+        <Typography ml={5} fontWeight={500} style={{ display: "inline" }}>
+          ✨📑 {CategoryEnum[category]} Postings 📚🔥
         </Typography>
       </div>
-      <section style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-        <Typography variant="h6">{posting.title}</Typography>
-        <Typography>Written in: {new Date(posting.createdAt).toLocaleString("en-GB", { timeZone: "UTC" })}</Typography>
-        <MarkdownRenderer>{posting.content}</MarkdownRenderer>
+      <section style={{ display: "flex", flexDirection: "column" }}>
+        <Typography variant="h6">Title: {posting.title}</Typography>
+        <Typography mt={1}>
+          Written in: {new Date(posting.createdAt).toLocaleString("en-GB", { timeZone: "UTC" })}
+        </Typography>
+        <Paper elevation={3} sx={{ px: 3, py: 1, mt: 2 }}>
+          <MarkdownRenderer>{posting.content}</MarkdownRenderer>
+        </Paper>
       </section>
     </Container>
   );

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { blogPostingData } from "../../../data";
 import { isCategory } from "../../../data/blogPostingData";
 import { ErrorContent } from "../ErrorContent";
+import { CategoryEnum } from "../../../data/blogPostingData";
 
 export const BlogPostingTitles = () => {
   window.scroll({ top: 0 });
@@ -20,15 +21,20 @@ export const BlogPostingTitles = () => {
         <Button onClick={() => navigate("/blog")} startIcon={<ArrowBack />}>
           Back
         </Button>
-        <Typography style={{ display: "inline" }} ml={5}>
-          {category} postings
+        <Typography ml={5} fontWeight={500} style={{ display: "inline" }}>
+          ✨📑 {CategoryEnum[category]} Postings 📚🔥
         </Typography>
       </div>
       <section style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         {blogPostingData[category]
           .sort((a, b) => b.id - a.id)
           .map((data) => (
-            <Button onClick={() => navigate(`${data.id}`)}>{data.title}</Button>
+            <article style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <Typography>{data.id}</Typography>
+              <Button fullWidth onClick={() => navigate(`${data.id}`)} style={{ justifyContent: "left" }}>
+                {data.title}
+              </Button>
+            </article>
           ))}
       </section>
     </Container>

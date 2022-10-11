@@ -20,7 +20,13 @@ export const BlogCategories = () => {
         {categoryData.map(({ title, image, link }) => (
           <Grid key={`blog_${title}`} item xs={12} sm={6} md={4}>
             <Card sx={{ maxWidth: 400, mx: "auto" }}>
-              <CardMedia component="img" image={image} alt={title} style={{ maxHeight: 150, objectFit: "contain" }} />
+              <CardMedia
+                component="img"
+                image={image}
+                alt={title}
+                style={{ maxHeight: 150, objectFit: "contain", cursor: "pointer" }}
+                onClick={() => navigate(link)}
+              />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {title}

@@ -1,5 +1,12 @@
-const categories = ["cpp", "java", "python"];
-export type Category = typeof categories[number];
+export enum CategoryEnum {
+  cpp = "C++",
+  java = "Java",
+  python = "Python",
+}
+
+export type Category = keyof typeof CategoryEnum;
+
+const categories = Object.keys(CategoryEnum);
 
 export const isCategory = (v: unknown): v is Category => {
   return typeof v === "string" && categories.includes(v);
