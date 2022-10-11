@@ -4,7 +4,7 @@ let ncp = require("ncp").ncp;
 ncp.limit = 16;
 
 let srcPath = "utils/";
-let destPath = "build/";
+let destPath = "dist/";
 
 console.log("Copying files...");
 ncp(srcPath, destPath, (err) => {
