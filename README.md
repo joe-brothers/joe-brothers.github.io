@@ -14,7 +14,7 @@
 
 ```
 yarn
-yarn run dev
+yarn run start
 ```
 
 Runs the app in the development mode.
