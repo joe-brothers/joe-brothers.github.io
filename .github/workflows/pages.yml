@@ -22,8 +22,8 @@ jobs:
           node-version: 16
           # cache: 'npm'
 
-      - run: npm ci --legacy-peer-deps
-      - run: npm run build
+      - run: yarn install
+      - run: yarn run build
         env:
           CI: false
 

@@ -13,14 +13,14 @@
 ## Commands
 
 ```
-npm install
-npm start
+yarn
+yarn run dev
 ```
 
 Runs the app in the development mode.
 
 ```
-npm run build
+yarn run build
 ```
 
 Builds the app for production to the `dist` folder.
