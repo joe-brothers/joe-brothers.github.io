@@ -52,7 +52,7 @@ export const TopBar = () => {
               textDecoration: "none",
             }}
           >
-            Joe
+            John
           </Typography>
           <Box sx={{ flexGrow: 1, justifyContent: "flex-end", display: { xs: "flex", md: "none" } }}>
             <IconButton
