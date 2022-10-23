@@ -1,10 +1,12 @@
+import styled from "@emotion/styled";
 import { ArrowBack } from "@mui/icons-material";
 import { Button, Container, Paper, Typography } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import { blogPostingData } from "../../../data";
 import { BlogPostingData, CategoryEnum, isCategory } from "../../../data/blogPostingData";
 import { ErrorContent } from "../ErrorContent";
-import { MarkdownRenderer } from "./MarkdownRenderer";
+// import { ReactComponent } from "../../../../public/postings/cpp_1.md";
+import { ReactComponent, attributes } from "./test.md";
 
 export const BlogPostingContent = () => {
   window.scroll({ top: 0 });
@@ -35,9 +37,29 @@ export const BlogPostingContent = () => {
           Written in: {new Date(posting.createdAt).toLocaleString("en-GB", { timeZone: "UTC" })}
         </Typography>
         <Paper elevation={3} sx={{ px: 3, py: 1, mt: 2 }}>
-          <MarkdownRenderer>{posting.content}</MarkdownRenderer>
+          <MarkdownStyle>
+            <ReactComponent />
+          </MarkdownStyle>
         </Paper>
       </section>
     </Container>
   );
 };
+
+const MarkdownStyle = styled.div`
+  font-size: 1rem;
+  font-family: "Roboto";
+  p > code {
+    background: #d5d9ef;
+  }
+  pre {
+    background-color: #e5eaee;
+    padding: 2rem;
+    line-height: 1.5rem;
+    margin: 2rem auto;
+  }
+  blockquote {
+    padding: 1rem;
+    border: 1px dashed black;
+  }
+`;

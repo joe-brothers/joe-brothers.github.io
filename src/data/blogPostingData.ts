@@ -25,22 +25,7 @@ export const blogPostingData: Record<Category, BlogPostingData[]> = {
       id: 1,
       createdAt: 1665334210000,
       title: "title1 c++",
-      content: `
-  # 헤딩
-  
-  **굵게**
-  
-  일반 텍스트
-  \`\`\`
-    hello world
-  \`\`\`
-    
-  *기울이기*
-  
-  글자 \`배경색\`
-    
-  > 인용문
-  `,
+      content: "asdf",
     },
     { id: 2, createdAt: 1665344210000, title: "title2 c++", content: "content2 c++" },
     { id: 3, createdAt: 1665354210000, title: "title3 c++", content: "content3 c++" },
