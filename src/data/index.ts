@@ -13,6 +13,7 @@ export const links = {
   utility: {
     impermanent:
       "https://play.google.com/store/apps/details?id=com.joebrothers.impermanent_loss_calculator&hl=en_US&gl=US",
+    age: "https://joe-brothers.com/age-calculator/",
   },
 };
 
@@ -90,12 +91,10 @@ export const utilityData: CardWithThumbnailData = [
     onClickShare: () => console.log("share clicked"),
   },
   {
-    title: "In preparation",
-    summary: "We are building amazing stuffs even now. Please wait a little bit.",
-    thumbnail: { kind: "emoji", emojiString: "⚒️" },
-    onClickPlay: () => {
-      return;
-    },
+    title: "Korean Age Calculator",
+    summary: "You know what? Koreans have three ages.",
+    thumbnail: { kind: "image", imageSrc: "/assets/util-age.png", imageAlt: "Korean Age Calculator" },
+    onClickPlay: () => openLinkInNewTab(links.utility.age),
     onClickShare: () => console.log("share clicked"),
   },
   {
