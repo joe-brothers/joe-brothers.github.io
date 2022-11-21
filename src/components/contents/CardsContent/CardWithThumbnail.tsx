@@ -1,10 +1,18 @@
 import { Card, CardMedia, CardContent, Typography, CardActions, Button } from "@mui/material";
 import { Thumbnail } from "../../../types";
 
-const getThumbnail = (thumbnail: Thumbnail) => {
+const getThumbnail = ({ thumbnail, onClickPlay }: { thumbnail: Thumbnail; onClickPlay?: () => void }) => {
   switch (thumbnail.kind) {
     case "image":
-      return <CardMedia component="img" image={thumbnail.imageSrc} alt={thumbnail.imageAlt} />;
+      return (
+        <CardMedia
+          component="img"
+          image={thumbnail.imageSrc}
+          alt={thumbnail.imageAlt}
+          onClick={onClickPlay}
+          sx={{ "&:hover": { cursor: "pointer" } }}
+        />
+      );
     case "emoji":
       return (
         <CardContent sx={{ position: "relative", height: "150px", backgroundColor: "#e6e6e6", userSelect: "none" }}>
@@ -41,7 +49,7 @@ export const CardWithThumbnail = ({
 }) => {
   return (
     <Card sx={{ maxWidth: 400, mx: "auto" }}>
-      {getThumbnail(thumbnail)}
+      {getThumbnail({ thumbnail, onClickPlay })}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
