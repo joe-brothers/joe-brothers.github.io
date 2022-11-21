@@ -21,7 +21,7 @@ export const gameData: CardWithThumbnailData = [
   {
     title: "Joe's Minesweeper",
     summary: "Cute simple minesweeper game that you can peek on answers and custom your own difficulty",
-    thumbnail: { kind: "image", imageSrc: "/assets/minesweeper.png", imageAlt: "minesweeper game" },
+    thumbnail: { kind: "image", imageSrc: "/assets/game-mine.png", imageAlt: "minesweeper game" },
     onClickPlay: () => openLinkInNewTab(links.game.minesweeper),
     onClickShare: () => console.log("share clicked"),
   },
@@ -86,7 +86,7 @@ export const utilityData: CardWithThumbnailData = [
     title: "Impermanent Loss Calculator",
     summary:
       "Impermanent Loss happens when you provided liquidity to a liquidity pool and the price of the asset in the pool changes. But how much is it exactly? With 'Impermanent Loss Calculator', you can simply calculate this.",
-    thumbnail: { kind: "image", imageSrc: "/assets/impermanent.png", imageAlt: "Impermanent Loss Calculator" },
+    thumbnail: { kind: "image", imageSrc: "/assets/util-loss.png", imageAlt: "Impermanent Loss Calculator" },
     onClickPlay: () => openLinkInNewTab(links.utility.impermanent),
     onClickShare: () => console.log("share clicked"),
   },
