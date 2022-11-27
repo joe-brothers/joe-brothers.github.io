@@ -14,15 +14,14 @@ import {
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const pages: { [key: string]: string }[] = [
-  { Games: "/games" },
-  { Utilities: "/utility" },
-  { Blog: "/blog" },
-  { Company: "/company" },
-];
-
 export const TopBar = () => {
   const navigate = useNavigate();
+  const pages: { [key: string]: () => void }[] = [
+    { Games: () => navigate("/games") },
+    { Utilities: () => navigate("/utility") },
+    { Blog: () => (window.location.href = "https://joe-brothers.com/blog/") },
+    { Company: () => navigate("/company") },
+  ];
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -90,7 +89,7 @@ export const TopBar = () => {
                   key={`menu_side_${Object.entries(page)[0][0]}`}
                   onClick={() => {
                     handleCloseNavMenu();
-                    navigate(Object.entries(page)[0][1]);
+                    Object.entries(page)[0][1]();
                   }}
                 >
                   <Typography textAlign="center">{Object.entries(page)[0][0]}</Typography>
@@ -104,7 +103,7 @@ export const TopBar = () => {
                 key={`menu_center_${Object.entries(page)[0][0]}`}
                 onClick={() => {
                   handleCloseNavMenu();
-                  navigate(Object.entries(page)[0][1]);
+                  Object.entries(page)[0][1]();
                 }}
                 sx={{ my: 2, color: "inherit", display: "block" }}
               >
