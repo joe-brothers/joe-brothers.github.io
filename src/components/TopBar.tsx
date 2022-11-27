@@ -36,24 +36,26 @@ export const TopBar = () => {
     <AppBar color="transparent" elevation={5} sx={{ backdropFilter: "blur(10px)" }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <img src="assets/logo.png" width={20} style={{ marginRight: 10 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: "block",
-              fontFamily: "Source Code Pro",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
+          <Box
+            sx={{ display: "flex", alignItems: "center", "&:hover": { cursor: "pointer" } }}
+            onClick={() => navigate("/")}
           >
-            Joe
-          </Typography>
+            <img src="assets/logo.png" width={20} style={{ marginRight: 10 }} />
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                fontFamily: "Source Code Pro",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              Joe
+            </Typography>
+          </Box>
           <Box sx={{ flexGrow: 1, justifyContent: "flex-end", display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
