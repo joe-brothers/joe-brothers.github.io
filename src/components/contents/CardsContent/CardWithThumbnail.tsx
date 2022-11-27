@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { Card, CardMedia, CardContent, Typography, CardActions, Button } from "@mui/material";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import { Thumbnail } from "../../../types";
+import { openLinkInNewTab } from "../../../utils";
 
-const getThumbnail = ({ thumbnail, onClickPlay }: { thumbnail: Thumbnail; onClickPlay?: () => void }) => {
+const getThumbnail = ({ thumbnail, link }: { thumbnail: Thumbnail; link?: string }) => {
   switch (thumbnail.kind) {
     case "image":
       return (
@@ -9,7 +14,7 @@ const getThumbnail = ({ thumbnail, onClickPlay }: { thumbnail: Thumbnail; onClic
           component="img"
           image={thumbnail.imageSrc}
           alt={thumbnail.imageAlt}
-          onClick={onClickPlay}
+          onClick={link ? () => openLinkInNewTab(link) : () => {}}
           sx={{ "&:hover": { cursor: "pointer" } }}
         />
       );
@@ -38,18 +43,38 @@ export const CardWithThumbnail = ({
   title,
   summary,
   thumbnail,
-  onClickPlay,
-  onClickShare,
+  link,
 }: {
   title: string;
   summary: string;
   thumbnail: Thumbnail;
-  onClickPlay: () => void;
-  onClickShare: () => void;
+  link?: string;
 }) => {
+  const [open, setOpen] = useState(false);
+  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
+  const action = (
+    <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
+      <CloseIcon fontSize="small" />
+    </IconButton>
+  );
+
+  const onClickShare = () => {
+    if (!link) {
+      return;
+    }
+    navigator.clipboard.writeText(`<${title}>\n${summary}\n${link}`);
+    setOpen(true);
+  };
+
   return (
     <Card sx={{ maxWidth: 400, mx: "auto" }}>
-      {getThumbnail({ thumbnail, onClickPlay })}
+      {getThumbnail({ thumbnail, link })}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
@@ -59,13 +84,20 @@ export const CardWithThumbnail = ({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={onClickPlay}>
+        <Button size="small" onClick={link ? () => openLinkInNewTab(link) : () => {}}>
           Play
         </Button>
         <Button size="small" onClick={onClickShare}>
           Share
         </Button>
       </CardActions>
+      <Snackbar
+        open={open}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        message="Copyed link to clipboard"
+        action={action}
+      />
     </Card>
   );
 };

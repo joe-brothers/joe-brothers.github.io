@@ -22,62 +22,41 @@ export const gameData: CardWithThumbnailData = [
     title: "Joe's Minesweeper",
     summary: "Cute simple minesweeper game that you can peek on answers and custom your own difficulty",
     thumbnail: { kind: "image", imageSrc: "/assets/game-mine.png", imageAlt: "minesweeper game" },
-    onClickPlay: () => openLinkInNewTab(links.game.minesweeper),
-    onClickShare: () => console.log("share clicked"),
+    link: links.game.minesweeper,
+    // onClickPlay: () => openLinkInNewTab(links.game.minesweeper),
+    // onClickShare: () => {
+    //   navigator.clipboard.writeText("Joe's Minesweeper");
+    // },
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "⏳" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🔨" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🛠️" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🪧" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🔧" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "⚙️" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
 ];
 
@@ -87,85 +66,53 @@ export const utilityData: CardWithThumbnailData = [
     summary:
       "Impermanent Loss happens when you provided liquidity to a liquidity pool and the price of the asset in the pool changes. But how much is it exactly? With 'Impermanent Loss Calculator', you can simply calculate this.",
     thumbnail: { kind: "image", imageSrc: "/assets/util-loss.png", imageAlt: "Impermanent Loss Calculator" },
-    onClickPlay: () => openLinkInNewTab(links.utility.impermanent),
-    onClickShare: () => console.log("share clicked"),
+    link: links.utility.impermanent,
   },
   {
     title: "Korean Age Calculator",
     summary: "You know what? Koreans have three ages.",
     thumbnail: { kind: "image", imageSrc: "/assets/util-age.png", imageAlt: "Korean Age Calculator" },
-    onClickPlay: () => openLinkInNewTab(links.utility.age),
-    onClickShare: () => console.log("share clicked"),
+    link: links.utility.age,
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "📖" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "⏳" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🔨" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🛠️" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🪧" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "🔧" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
     thumbnail: { kind: "emoji", emojiString: "⚙️" },
-    onClickPlay: () => {
-      return;
-    },
-    onClickShare: () => console.log("share clicked"),
   },
 ];
 
 export const footerMenuData: Record<string, Record<string, () => void>[]> = {
-  Games: [
-    { Minesweeper: () => openLinkInNewTab(links.game.minesweeper) },
-  ],
+  Games: [{ Minesweeper: () => openLinkInNewTab(links.game.minesweeper) }],
   Utilities: [
     {
       "Impermenant Loss Calculator": () => openLinkInNewTab(links.utility.impermanent),
