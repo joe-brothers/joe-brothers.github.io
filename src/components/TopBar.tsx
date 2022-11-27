@@ -110,16 +110,6 @@ export const TopBar = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "block" } }}>
-            <Tooltip title="I'm tooltip">
-              <Button variant="text">Text</Button>
-            </Tooltip>
-            <Tooltip title="I'm saying blah blah">
-              <Button variant="contained" sx={{ ml: 1 }}>
-                BlahBlah
-              </Button>
-            </Tooltip>
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>

@@ -46,24 +46,6 @@ export const Footer = () => {
             ))}
           </ul>
         </Box>
-        <Box>
-          <FormControl sx={{ m: 1, minWidth: 100 }} size="small">
-            <InputLabel id="language-select">Language</InputLabel>
-            <Select
-              labelId="language-select"
-              id="language-select"
-              value={language}
-              label="Language"
-              onChange={onChangeLanguage}
-            >
-              {languages.map((lang) => (
-                <MenuItem key={`menuitem_lang_${lang}`} value={lang}>
-                  {lang}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Box>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
           <SocialIcons />
         </Box>
