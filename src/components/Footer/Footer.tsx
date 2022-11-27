@@ -17,18 +17,11 @@ const MenuLink = styled(Link)(({ theme }) => ({
 const languages: string[] = ["English", "Korean"];
 
 const links: { [key: string]: string } = {
-  "Terms of Service": "/",
   "Privacy Policy": "/privacy-policy",
-  "Cookie Settings": "/",
-  "Sub-Processors": "/",
 };
 
 export const Footer = () => {
   const navigate = useNavigate();
-  const [language, setLanguage] = useState(languages[0]);
-  const onChangeLanguage = (event: SelectChangeEvent) => {
-    setLanguage(event.target.value);
-  };
 
   return (
     <Container maxWidth="lg" sx={{ display: "flex", flexDirection: "column", gap: 10, pt: 5, pb: 10 }}>
