@@ -1,6 +1,6 @@
 import { Button, Paper, styled, Typography } from "@mui/material";
-import { basicTheme } from "../../../themes";
-import { openLinkInNewTab } from "../../../utils";
+import { basicTheme } from "../../../../themes";
+import { openLinkInNewTab } from "../../../../utils";
 
 export const CardWithButton = ({
   textFirst,

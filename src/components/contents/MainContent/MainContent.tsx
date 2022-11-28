@@ -1,8 +1,7 @@
 import { Logos } from "./Logos";
 import { Quotes } from "./Quotes";
 import { Products } from "./Products";
-import { CardWithButton } from "./CardWithButton";
-import { PercentageCards } from "./PercentageCards";
+import { PercentageCards, CardWithButton } from "./Cards";
 import { TextWithButtonAndImage } from "./TextWithButtonAndImage";
 import { LinkWithArrow } from "../../LinkWithArrow";
 import { Container, Divider, Typography } from "@mui/material";
