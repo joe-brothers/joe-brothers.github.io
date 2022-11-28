@@ -2,9 +2,9 @@ import { Container } from "@mui/material";
 import { PercentageCard } from "./PercentageCard";
 
 const percentageData = [
-  { percentage: 75, text: "Reduction in booking cancellations for a global ride sharing superapp" },
-  { percentage: 33, text: "Reduction in customer support calls for a leading on-demand food delivery app" },
-  { percentage: 8, text: "Increase in user retention for a leading international community site" },
+  { percentage: 99, text: "Change that you will enjoy our games" },
+  { percentage: 33, text: "Growth of quality of life after using our utilities" },
+  { percentage: 1, text: "Our level of developing things" },
 ];
 
 export const PercentageCards = () => {

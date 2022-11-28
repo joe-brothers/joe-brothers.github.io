@@ -1,16 +1,21 @@
 import { Button, Paper, styled, Typography } from "@mui/material";
 import { basicTheme } from "../../../themes";
+import { openLinkInNewTab } from "../../../utils";
 
 export const CardWithButton = ({
   textFirst,
   textSecond,
   textButtonFirst,
+  linkButtonFirst,
   textButtonSecond,
+  linkButtonSecond,
 }: {
   textFirst: string;
-  textSecond: string;
+  textSecond?: string;
   textButtonFirst: string;
+  linkButtonFirst: string;
   textButtonSecond: string;
+  linkButtonSecond: string;
 }) => {
   return (
     <Paper
@@ -34,10 +39,15 @@ export const CardWithButton = ({
         <Button
           variant="contained"
           style={{ borderRadius: 30, backgroundColor: "white", color: basicTheme.palette.primary.dark }}
+          onClick={() => openLinkInNewTab(linkButtonFirst)}
         >
           {textButtonFirst}
         </Button>
-        <Button variant="contained" style={{ borderRadius: 30, border: "2px solid white" }}>
+        <Button
+          variant="contained"
+          style={{ borderRadius: 30, border: "2px solid white" }}
+          onClick={() => openLinkInNewTab(linkButtonSecond)}
+        >
           {textButtonSecond}
         </Button>
       </div>

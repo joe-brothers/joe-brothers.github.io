@@ -29,10 +29,11 @@ export const MainContent = () => {
       <Quotes />
       <Container sx={{ py: 5 }}>
         <CardWithButton
-          textFirst="Ready for"
-          textSecond="the next level?"
-          textButtonFirst="Talk to Sales"
-          textButtonSecond="Start a free trial"
+          textFirst="Find out more!"
+          textButtonFirst="GitHub"
+          linkButtonFirst="https://github.com/joe-brothers"
+          textButtonSecond="Google Play"
+          linkButtonSecond="https://play.google.com/store/apps/dev?id=8562056654217636569&hl=en_US&gl=US"
         />
       </Container>
     </Container>
