@@ -95,7 +95,7 @@ export const CardWithThumbnail = ({
         open={open}
         autoHideDuration={3000}
         onClose={handleClose}
-        message="Copyed link to clipboard"
+        message="Copied link to clipboard"
         action={action}
       />
     </Card>
