@@ -38,10 +38,10 @@ export const Products = () => {
         explanation="We are building things that would change all the aspects of the world."
         explanationDetails={[
           "We don't follow the rules to win. We make rules that we win.",
-          "If you want to join our groundbreaking plan, please send your resume to contact@joe-brothers.com",
+          "And.. we also run tech blog :)",
         ]}
-        linkText="Contact Joe Brothers"
-        onClickLink={() => openLinkInNewTab(links.Mail)}
+        linkText="Check our tech blog"
+        onClickLink={() => openLinkInNewTab(links.Blog)}
       />
     </Container>
   );

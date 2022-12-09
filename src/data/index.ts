@@ -7,7 +7,7 @@ export const links = {
   GitHub: "https://github.com/joe-brothers",
   LinkedIn: "https://www.linkedin.com/company/joe-brothers/",
   PrivacyPolicy: "https://joe-brothers.com/privacy-policy-impermanent-loss-calculator.html",
-  Mail: "mailto:contact@joe-brothers.com",
+  Blog: "https://joe-brothers.com/blog/",
   game: {
     minesweeper: "https://joe-brothers.com/minesweeper/",
   },
@@ -124,8 +124,7 @@ export const footerMenuData: Record<string, Record<string, () => void>[]> = {
     { "Google Play": () => openLinkInNewTab(links.GooglePlay) },
   ],
   Company: [
-    { About: () => openLinkInNewTab(`${process.env.PUBLIC_URL}/#/company`) },
-    { "Contact Us": () => openLinkInNewTab(links.Mail) },
+    { About: () => openLinkInNewTab(`./#/company`) },
   ],
 };
 
