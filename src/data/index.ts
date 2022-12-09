@@ -5,6 +5,7 @@ import { blogPostingData } from "./blogPostingData";
 export const links = {
   GooglePlay: "https://play.google.com/store/apps/dev?id=8562056654217636569&hl=en_US&gl=US",
   GitHub: "https://github.com/joe-brothers",
+  LinkedIn: "https://www.linkedin.com/company/joe-brothers/",
   PrivacyPolicy: "https://joe-brothers.com/privacy-policy-impermanent-loss-calculator.html",
   Mail: "mailto:contact@joe-brothers.com",
   game: {
