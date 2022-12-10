@@ -1,5 +1,6 @@
 import { Divider, Grid, Link, styled, Typography } from "@mui/material";
 import { footerMenuData } from "../../data";
+import { ReactComponent as Logo } from "../../../public/assets/logo.svg";
 
 const MenuLink = styled(Link)(({ theme }) => ({
   fontFamily: "Roboto",
@@ -13,8 +14,8 @@ const MenuLink = styled(Link)(({ theme }) => ({
 export const FooterMenu = () => {
   return (
     <Grid container spacing={2} columns={{ xs: 2, sm: 5 }}>
-      <Grid item xs={2} sm={1}>
-        <img src="assets/logo.png" width="50%" style={{ maxWidth: 80 }} />
+      <Grid item xs={2} sm={1} sx={{ svg: { color: "red" } }}>
+        <Logo style={{ width: "50%", maxWidth: 80, maxHeight: 80, fill: "#808080" }} />
       </Grid>
       {Object.entries(footerMenuData).map(([category, items]) => {
         return (

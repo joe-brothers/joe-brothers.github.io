@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, Container, FormControl, InputLabel, Link, MenuItem, Select, styled, Typography } from "@mui/material";
-import { SelectChangeEvent } from "@mui/material/Select";
+import { Box, Container, Link, styled, Typography } from "@mui/material";
 import { SocialIcons } from "./SocialIcons";
 import { FooterMenu } from "./FooterMenu";
 
@@ -13,8 +11,6 @@ const MenuLink = styled(Link)(({ theme }) => ({
     cursor: "pointer",
   },
 }));
-
-const languages: string[] = ["English", "Korean"];
 
 const links: { [key: string]: string } = {
   "Privacy Policy": "/privacy-policy",
@@ -34,7 +30,9 @@ export const Footer = () => {
           <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none" }}>
             {Object.entries(links).map(([key, value]) => (
               <li key={`footer_link_${key}`}>
-                <MenuLink onClick={() => navigate(value)}>{key}</MenuLink>
+                <MenuLink onClick={() => navigate(value)} sx={{ lineHeight: 1.5 }}>
+                  {key}
+                </MenuLink>
               </li>
             ))}
           </ul>
