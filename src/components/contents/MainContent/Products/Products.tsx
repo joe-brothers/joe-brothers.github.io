@@ -19,7 +19,7 @@ export const Products = () => {
           "Your time might disappear in less than a blink of an eye.",
         ]}
         linkText="See our games"
-        onClickLink={() => navigate("/games")}
+        onClickLink={() => navigate("/game")}
       />
       <ProductWithImage
         isImageLeft={true}

@@ -22,7 +22,7 @@ export const App = () => {
         <Route path="" element={<LayoutWithTopBarAndFooter />}>
           <Route index element={<MainContent />} />
           <Route
-            path="games"
+            path="game"
             element={<CardsContent pageTitle={"✨🎲 Here you can enjoy our games! 🎮🙌"} cardsData={gameData} />}
           />
           <Route path="utility" element={<CardsContent pageTitle={"💡🕰️ Utility 🧮📱"} cardsData={utilityData} />} />

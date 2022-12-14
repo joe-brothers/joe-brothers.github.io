@@ -12,7 +12,7 @@ export const TextWithButtonAndImage = () => {
             We make apps
           </Typography>
           <Typography>We are Joe Brothers, makes fun and useful apps and games.</Typography>
-          <Button onClick={() => navigate("/games")} variant="contained" style={{ width: 100, borderRadius: 30 }}>
+          <Button onClick={() => navigate("/game")} variant="contained" style={{ width: 100, borderRadius: 30 }}>
             Click
           </Button>
         </Grid>

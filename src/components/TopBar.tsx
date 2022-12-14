@@ -8,7 +8,6 @@ import {
   Menu,
   MenuItem,
   Toolbar,
-  Tooltip,
   Typography,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
@@ -17,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 export const TopBar = () => {
   const navigate = useNavigate();
   const pages: { [key: string]: () => void }[] = [
-    { Games: () => navigate("/games") },
+    { Games: () => navigate("/game") },
     { Utilities: () => navigate("/utility") },
     { Blog: () => (window.location.href = "https://joe-brothers.com/blog/") },
     { Company: () => navigate("/company") },
