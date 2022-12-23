@@ -15,6 +15,7 @@ export const links = {
     impermanent:
       "https://play.google.com/store/apps/details?id=com.joebrothers.impermanent_loss_calculator&hl=en_US&gl=US",
     age: "https://joe-brothers.com/age-calculator/",
+    list: "https://joe-brothers.com/list-randomizer/",
   },
 };
 
@@ -72,10 +73,12 @@ export const utilityData: CardWithThumbnailData = [
     link: links.utility.age,
   },
   {
-    title: "In preparation",
-    summary: "We are building amazing stuffs even now. Please wait a little bit.",
-    thumbnail: { kind: "emoji", emojiString: "📖" },
+    title: "List Randomizer",
+    summary: "We'll keep our fingers crossed for you.",
+    thumbnail: { kind: "image", imageSrc: "/assets/util-list.gif", imageAlt: "List Randomizer" },
+    link: links.utility.list,
   },
+
   {
     title: "In preparation",
     summary: "We are building amazing stuffs even now. Please wait a little bit.",
