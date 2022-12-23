@@ -24,10 +24,6 @@ export const gameData: CardWithThumbnailData = [
     summary: "Cute simple minesweeper game that you can peek on answers and custom your own difficulty",
     thumbnail: { kind: "image", imageSrc: "/assets/game-mine.png", imageAlt: "minesweeper game" },
     link: links.game.minesweeper,
-    // onClickPlay: () => openLinkInNewTab(links.game.minesweeper),
-    // onClickShare: () => {
-    //   navigator.clipboard.writeText("Joe's Minesweeper");
-    // },
   },
   {
     title: "In preparation",
@@ -113,19 +109,21 @@ export const utilityData: CardWithThumbnailData = [
 ];
 
 export const footerMenuData: Record<string, Record<string, () => void>[]> = {
-  Games: [{ Minesweeper: () => openLinkInNewTab(links.game.minesweeper) }],
-  Utilities: [
-    {
-      "Impermenant Loss Calculator": () => openLinkInNewTab(links.utility.impermanent),
-    },
-  ],
+  Games: gameData
+    .filter((card) => card.link !== undefined)
+    .map((card) => {
+      return { [card.title]: () => openLinkInNewTab(card.link || `.`) };
+    }),
+  Utilities: utilityData
+    .filter((card) => card.link !== undefined)
+    .map((card) => {
+      return { [card.title]: () => openLinkInNewTab(card.link || `.`) };
+    }),
   Developer: [
     { "GitHub Organization": () => openLinkInNewTab(links.GitHub) },
     { "Google Play": () => openLinkInNewTab(links.GooglePlay) },
   ],
-  Company: [
-    { About: () => openLinkInNewTab(`./#/company`) },
-  ],
+  Company: [{ About: () => openLinkInNewTab(`./#/company`) }],
 };
 
 export { blogPostingData };

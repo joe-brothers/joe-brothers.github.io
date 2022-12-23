@@ -15,6 +15,4 @@ export type CardWithThumbnailData = {
   summary: string;
   thumbnail: Thumbnail;
   link?: string;
-  // onClickPlay: () => void;
-  // onClickShare: () => void;
 }[];
