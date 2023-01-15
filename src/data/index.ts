@@ -7,7 +7,7 @@ export const links = {
   GitHub: "https://github.com/joe-brothers",
   LinkedIn: "https://www.linkedin.com/company/joe-brothers/",
   PrivacyPolicy: "https://joe-brothers.com/privacy-policy-impermanent-loss-calculator.html",
-  Blog: "https://joe-brothers.com/blog/",
+  Blog: "https://blog.joe-brothers.com/",
   game: {
     minesweeper: "https://joe-brothers.com/minesweeper/",
   },

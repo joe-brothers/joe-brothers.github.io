@@ -12,13 +12,14 @@ import {
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import { links } from "../data";
 
 export const TopBar = () => {
   const navigate = useNavigate();
   const pages: { [key: string]: () => void }[] = [
     { Games: () => navigate("/game") },
     { Utilities: () => navigate("/utility") },
-    { Blog: () => (window.location.href = "https://joe-brothers.com/blog/") },
+    { Blog: () => (window.location.href = links.Blog) },
     { Company: () => navigate("/company") },
   ];
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
