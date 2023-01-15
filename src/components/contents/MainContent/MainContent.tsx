@@ -17,12 +17,12 @@ export const MainContent = () => {
       <Container sx={{ py: 5 }}>
         <Divider />
       </Container>
-      <Container style={{ textAlign: "center" }} sx={{ pt: 5, pb: 10 }}>
+      {/* <Container style={{ textAlign: "center" }} sx={{ pt: 5, pb: 10 }}>
         <Typography variant="h3" align="center" mb={5}>
           Build experiences that drive engagement and increase transactions
         </Typography>
         <LinkWithArrow text="Watch a video" onClick={() => console.log("clicked")} />
-      </Container>
+      </Container> */}
       <Products />
       <PercentageCards />
       <Quotes />
