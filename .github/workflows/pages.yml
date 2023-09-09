@@ -19,13 +19,30 @@ jobs:
       - uses: actions/configure-pages@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
-          # cache: 'npm'
+          node-version-file: '.tool-versions'
 
-      - run: yarn install
-      - run: yarn run build
-        env:
-          CI: false
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - run: pnpm install
+      - run: pnpm build
+      - run: touch ./dist/.nojekyll
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
@@ -46,4 +63,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2

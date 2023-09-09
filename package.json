@@ -25,6 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "start": "vite",
     "build": "tsc && vite build && node utils/file-copy.js",
     "serve": "vite preview"
@@ -36,8 +37,7 @@
     ]
   },
   "engines": {
-    "npm": "please-use-yarn",
-    "yarn": ">=1.22.0"
+    "pnpm": ">=8"
   },
   "browserslist": {
     "production": [

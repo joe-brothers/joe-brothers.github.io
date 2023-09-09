@@ -13,14 +13,17 @@
 ## Commands
 
 ```
-yarn
-yarn run start
+corepack enable pnpm
 ```
+Install node and enable pnpm with corepack
 
+```
+pnpm install
+pnpm start
+```
 Runs the app in the development mode.
 
 ```
-yarn run build
+pnpm build
 ```
-
 Builds the app for production to the `dist` folder.
